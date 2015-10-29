@@ -1,34 +1,57 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>STW4</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/customs.css">
-  <script src="js/temperatura.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
 </head>
 <body>
-<div id="header">
-  <h1 id="titulo">Conversor de temperatura 4</h1>
-  <br>
-  <h2>Subido a iaas.ull.es</h2>
+<h1 id="sistemas-y-tecnologías-web">Sistemas y Tecnologías Web</h1>
+<h3 id="tutorial-para-mac-os-x-de-implantación-en-iaas.ull.es">Tutorial para Mac OS-X de implantación en iaas.ull.es</h3>
+<ul>
+<li>Para ver este tutorial en html, (<a href="http://giffunis.github.io/STW4/">click aquí</a>)</li>
+</ul>
+<h4 id="primer-acceso-a-iaas.ull"> 1. Primer acceso a <a href="http://iaas.ull.es/ovirt-engine/">iaas.ull</a></h4>
+<div class="figure">
+<img src="readme-images/imagen1.png" alt="iaas.ull.es" />
+<p class="caption">iaas.ull.es</p>
 </div>
-<!-- /header -->
-<div id="cuerpo">
-  <p>En esta ocación, volvemos a utilizar la herencia y añadimos el uso de hilos (Web Workers)</p>
-  <br>
-  <table>
-    <tr>
-      <th>Temperatura a convertir (Por ejemplo: 32f, 3.2e1F, -5,7C) =></th>
-      <td><input id="entrada" autofocus onchange="convertir()"; placeholder="3.2e1f" size 30></td>
-    </tr>
-    <tr>
-      <th>Temperatura convertida:</th>
-        <td><span class="output" id="salida"></span></td>
-    </tr>
-  </table>
-</div>
-<!-- /cuerpo -->
-
+<p>Click en &quot;Portal del usuario&quot;, introducimos el alu y la contraseña.</p>
+<p>Nos aparecerá la máquina creada por el profesor: <img src="readme-images/imagen2.png" alt="captura" /></p>
+<p>Accederemos a &quot;VNC modificar&quot;, que se encuentra en el panel derecho y elegiremos &quot;noVNC&quot;, tal y como aparece en la imagen: <img src="readme-images/imagen3.png" alt="captura" /></p>
+<p>Arrancamos nuestra máquina (Nombre de usuario y contraseña: usuario) <img src="readme-images/imagen4.png" alt="captura" /></p>
+<h4 id="configurar-el-acceso-desde-ssh"> 2. Configurar el acceso desde ssh</h4>
+<p>Debemos distinguir que existen dos posibilidades: * Desde la red de la ULL. * Desde otro sitio.</p>
+<p>Pasos en común:</p>
+<ul>
+<li><p>Debemos conocer la ip de nuestro servidor, para ello:</p>
+<pre><code>$ ifconfig</code></pre></li>
+<li><p>Agregaremos nuestra máquina a nuestro fichero <code>~/.ssh/config</code> <img src="readme-images/imagen5.png" alt="captura" /></p></li>
+</ul>
+<p>Si nos encontramos en la red de la ULL: * Debemos autentificarnos en <a href="http://acceso.ull.es/">acceso.ull</a> * Ejecutar el comando:</p>
+<pre><code>  $ ssh vpn</code></pre>
+<p>Si nos encontramos fuera: * Instalar y configurar <a href="https://usuarios.ull.es/vpn/mac.html">Cliente VPN Global Protect para Mac OSX</a> * Ejecutar el comando:</p>
+<pre><code>  $ ssh vpn</code></pre>
+<h4 id="puesta-en-marcha-de-la-práctica-anterior">3. Puesta en marcha de la práctica anterior</h4>
+<p>3.1. Instalamos nodejs (En mi caso lo venía instalado pero no me funcionó hasta que lo reinstalé):</p>
+<pre><code>$ sudo apt-get install nodejs-legacy</code></pre>
+<p>3.2 Instalamos npm</p>
+<pre><code>$ sudo apt-get install npm</code></pre>
+<p>3.3 Hacemos un git clone del repo</p>
+<p>3.4 Instalamos las dependencias.</p>
+<pre><code>$ npm install</code></pre>
+<p>3.5 Arrancamos el servidor</p>
+<pre><code>$ node static-server.js</code></pre>
+<p>Fin</p>
+<h3 id="links-de-la-práctica">Links de la práctica:</h3>
+<ul>
+<li><strong>Travis:</strong> <a href="https://travis-ci.org/giffunis/STW4"><img src="https://travis-ci.org/giffunis/STW4.svg?branch=master" alt="Build Status" /></a></li>
+<li><strong><a href="http://10.6.128.81:8080/index.html">Despliegue</a></strong></li>
+<li><strong><a href="http://10.6.128.81:8080/vendor/test.html">Blanket</a></strong></li>
+<li><strong><a href="https://github.com/giffunis/STW4">Repositorio en GitHub</a></strong></li>
+<li><strong>Página web de la <a href="http://giffunis.github.io/stw">asignatura</a></strong></li>
+</ul>
 </body>
 </html>
