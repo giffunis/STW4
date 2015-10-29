@@ -44,6 +44,16 @@ describe("Pruebas BDD", function() {
       }
     });
 
+    it("should greet passed target after one second", function(done) {
+     (new Temperatura("32F")).convert(function() {
+       done();
+        expect(salida.innerHTML).to.equal("0.0C");
+        //done();
+      });
+      //  expect(salida.innerHTML).to.equal("0.0C");
+       //done();
+   });
+
     it("convertir2(0C)", function() {
 
       window.onload = function() {
@@ -90,13 +100,12 @@ describe("Pruebas BDD", function() {
       sinon.assert.calledWithExactly(console.error, "Error en el paso de argumentos")
     });
 
-    it("window.Worker", function() {
-      entrada.value = "0C";
-      convertir();
-      sinon.assert.notCalled(console.error);
-
-      sinon.assert.calledWithExactly(console.log, "El navegador acepta webWorker")
-    });
+    // it("window.Worker", function() {
+    //   entrada.value = "0C";
+    //   convertir();
+    //   sinon.assert.notCalled(console.error);
+    //   sinon.assert.calledWithExactly(console.log, "El navegador acepta webWorker")
+    // });
 
   });
 
