@@ -2,6 +2,8 @@
 
 ### Tutorial para Mac OS-X de implantación en iaas.ull.es
 
+* Para ver este tutorial en html, (click aquí)[]
+
 #### 1. Primer acceso a [iaas.ull](http://iaas.ull.es/ovirt-engine/)
 ![iaas.ull.es](readme-images/imagen1.png)
 
@@ -65,3 +67,8 @@ Si nos encontramos fuera:
 Fin
 
 ### Links de la práctica:
+* **Travis:** [![Build Status](https://travis-ci.org/giffunis/STW4.svg?branch=master)](https://travis-ci.org/giffunis/STW4)
+* **[Despliegue](http://10.6.128.81:8080/index.html)**
+* **[Blanket](http://10.6.128.81:8080/vendor/test.html)**
+* **[Repositorio en GitHub](https://github.com/giffunis/STW4)**
+* **Página web de la [asignatura](http://giffunis.github.io/stw)**
