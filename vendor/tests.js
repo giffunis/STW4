@@ -2,6 +2,23 @@ var expect = chai.expect;
 
 
 describe("Pruebas BDD", function() {
+  var sandbox;
+
+   beforeEach(function() {
+     // create a sandbox
+     sandbox = sinon.sandbox.create();
+
+     // stub some console methods
+     sandbox.stub(window.console, "log");
+     sandbox.stub(window.console, "error");
+   });
+
+   afterEach(function() {
+     // restore the environment as it was before
+     sandbox.restore();
+   });
+
+
  var aux = document.getElementById("salida");
 
    describe("Temperatura()", function() {
@@ -51,6 +68,22 @@ describe("Pruebas BDD", function() {
     });
   });
 
+  describe("Sinon 1.17.2", function() {
+    it("Un argumento", function() {
+      temp = new Temperatura("0.0e0c");
+      sinon.assert.notCalled(console.error);
+      sinon.assert.calledOnce(console.log);
+      sinon.assert.calledWithExactly(console.log, "Un argumento")
+    });
+
+    it("Dos argumentos", function() {
+      temp = new Temperatura("0.0e0","c");
+      sinon.assert.notCalled(console.error);
+      sinon.assert.calledOnce(console.log);
+      sinon.assert.calledWithExactly(console.log, "Dos argumentos")
+    });
+
+  });
 
 
 });

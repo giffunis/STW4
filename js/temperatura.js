@@ -9,12 +9,14 @@ function Medida(){
   var ndatosEntrada = datosEntrada.length;
   switch (ndatosEntrada) {
     case 1: // only one argument.
+    console.log('Un argumento');
       var regexp = /([+-]?\d+(?:\.\d*)?(?:\s*[e]\d+)?)\s*([fFcC])/;
       var aux = datosEntrada[0].match(regexp);
       this.valor = aux[1];
       this.tipo = aux[2];
       break;
     case 2:
+    console.log('Dos argumentos');
       this.valor = datosEntrada[0];
       this.tipo = datosEntrada[1];
       break;
