@@ -1,0 +1,33 @@
+{
+  "name": "stw3",
+  "version": "0.0.1",
+  "description": "Uso de WebWorkers",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "open http://localhost:3000/vendor/test.html",
+    "server": "node js/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giffunis/STW3.git"
+  },
+  "author": "José Saúl Giffuni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giffunis/STW3/issues"
+  },
+  "homepage": "https://github.com/giffunis/STW3#readme",
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "express": "^4.13.3",
+    "html2js": "^0.2.0",
+    "karma": "^0.13.14",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-html2js-preprocessor": "^0.1.0",
+    "karma-mocha": "^0.2.0",
+    "mocha": "^2.3.3",
+    "node-static": "^0.7.7"
+  }
+}

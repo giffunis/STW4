@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>STW3</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/customs.css">
+  <script src="js/temperatura.js"></script>
+</head>
+<body>
+<div id="header">
+  <h1 id="titulo">Conversor de temperatura 3</h1>
+</div>
+<!-- /header -->
+<div id="cuerpo">
+  <p>En esta ocación, volvemos a utilizar la herencia y añadimos el uso de hilos (Web Workers)</p>
+  <br>
+  <table>
+    <tr>
+      <th>Temperatura a convertir (Por ejemplo: 32f, 3.2e1F, -5,7C) =></th>
+      <td><input id="entrada" autofocus onchange="convertir()"; placeholder="3.2e1f" size 30></td>
+    </tr>
+    <tr>
+      <th>Temperatura convertida:</th>
+        <td><span class="output" id="salida"></span></td>
+    </tr>
+  </table>
+</div>
+<!-- /cuerpo -->
+
+</body>
+</html>

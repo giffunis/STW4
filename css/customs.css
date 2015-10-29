@@ -1,0 +1,13 @@
+
+body{
+  background-image: url("../img/plane.jpg");
+  background-size: cover;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#titulo{
+  text-align: center;
+}
+table{
+  margin: auto;
+}
