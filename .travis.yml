@@ -8,7 +8,7 @@ before_script:
 
 branches:
   only:
-    - travis
+    - master
 
 script:
 - ./node_modules/karma/bin/karma start --single-run
