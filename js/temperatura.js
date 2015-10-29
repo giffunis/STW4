@@ -21,7 +21,7 @@ function Medida(){
       this.tipo = datosEntrada[1];
       break;
     default:
-      alert("Error interno");
+      console.error("Error en el paso de argumentos");
   }
 }
 

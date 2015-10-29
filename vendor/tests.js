@@ -83,6 +83,21 @@ describe("Pruebas BDD", function() {
       sinon.assert.calledWithExactly(console.log, "Dos argumentos")
     });
 
+    it("Tres argumentos", function() {
+      temp = new Temperatura("0.0e0","c","f");
+      sinon.assert.notCalled(console.log);
+      sinon.assert.calledOnce(console.error);
+      sinon.assert.calledWithExactly(console.error, "Error en el paso de argumentos")
+    });
+
+    it("window.Worker", function() {
+      entrada.value = "0C";
+      convertir();
+      sinon.assert.notCalled(console.error);
+
+      sinon.assert.calledWithExactly(console.log, "El navegador acepta webWorker")
+    });
+
   });
 
 
