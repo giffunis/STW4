@@ -18,7 +18,7 @@ describe("Pruebas BDD", function() {
      sandbox.restore();
    });
 
-
+  var aux = document.getElementById("entrada");
  var aux = document.getElementById("salida");
 
    describe("Temperatura()", function() {
